@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="numeric">
+  <info>
+    <title>Custom Numeric Hyperlink Style</title>
+    <id>http://www.example.com/custom-numeric-hyperlink</id>
+    <link href="http://www.example.com/custom-numeric-hyperlink" rel="self"/>
+    <author>
+      <name>Custom Style Developer</name>
+    </author>
+    <category citation-format="numeric"/>
+    <updated>2025-03-09T00:00:00+00:00</updated>
+  </info>
+
+  <!-- Make in-text citations clickable to the bibliography entry -->
+  <citation>
+    <layout prefix="[" suffix="]">
+      <text variable="citation-number"/>
+    </layout>
+  </citation>
+  
+
+  <bibliography hanging-indent="true" entry-spacing="0">
+    <!-- Sort by citation number -->
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
+
+    <layout>
+      <!-- First line: bracketed number + quoted title + period (display as its own block) -->
+      <text macro="title-line" display="block"/>
+      <!-- Second line: small indent + 'URL: ' + short link (note field), hyperlinked to the long URL (URL field) -->
+      <text macro="url-line" display="indent" prefix="       "/>
+    </layout>
+  </bibliography>
+
+  <!-- Macro for the first line -->
+  <macro name="title-line">
+    <group delimiter=" ">
+      <text variable="citation-number" prefix="[" suffix="]"/>
+      <text variable="annote" quotes="true" suffix="."/>
+    </group>
+  </macro>
+
+  <!-- Macro for the second line -->
+  <macro name="url-line">
+    <text value="       "/>
+    <!-- Show the note text, but make it a hyperlink to the 'URL' field -->
+    <text variable="note" link="URL"/>
+  </macro>
+</style>

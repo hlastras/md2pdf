@@ -1,0 +1,8 @@
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman} % Tu fuente principal
+\newfontfamily\symbolfont{Latin Modern Math} % Para símbolos matemáticos
+\newfontfamily\extrasymbolfont{DejaVu Sans} % Fuente secundaria existente
+\newfontfamily\cjksymbolfont{Noto Sans CJK JP} % Nueva fuente para CJK
+\DeclareTextFontCommand{\textsymbol}{\symbolfont}
+\DeclareTextFontCommand{\textextrasymbol}{\extrasymbolfont}
+\DeclareTextFontCommand{\textcjksymbol}{\cjksymbolfont} % Nuevo comando
