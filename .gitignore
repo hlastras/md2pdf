@@ -1,4 +1,5 @@
 *.md
+!README.md
 *.bib
 *.pdf
 .DS_Store
