@@ -3,3 +3,4 @@
 *.bib
 *.pdf
 .DS_Store
+*.err

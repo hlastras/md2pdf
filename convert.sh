@@ -41,7 +41,7 @@ fi
 
 # Run pandoc to create PDF
 echo "Creating PDF..."
-pandoc --citeproc --bibliography="$TEMP_BIB" --csl=cites.csl "$TEMP_MD" -o "$OUTPUT_PDF" --pdf-engine=xelatex --include-in-header=preamble.tex
+pandoc --citeproc --bibliography="$TEMP_BIB" --csl=cites.csl "$TEMP_MD" -o "$OUTPUT_PDF" --pdf-engine=xelatex --include-in-header=preamble.tex -V fontsize=11pt
 
 # Check if the previous command failed or if the PDF was created successfully
 if [ $? -ne 0 ] || [ ! -f "$OUTPUT_PDF" ]; then

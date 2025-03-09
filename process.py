@@ -18,7 +18,7 @@ def replace_special_characters(text):
     symbol_groups = {
         'textsymbol': [
             '≈', '⇒',  # Original characters
-            'μ', 'κ', 'δ',  # Greek letters
+            'α', 'μ', 'κ', 'δ',  # Greek letters
             '≤', '≥',  # Comparison operators
             '∼',  # Tilde operator
         ],
